@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Music Library{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon/music_library.jpg') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('main.index') }}">Home</a>
+            <a href="{{ url_for('songs.song') }}">Songs</a>
+            <a href="{{ url_for('main.regions') }}">Artists</a>
+            <a href="{{ url_for('ranking.rank') }}">Ranking</a>
+            {% if session.get('user') %}
+                <span>Welcome ，{{ session['user'] }}</span>
+                <a href="{{ url_for('auth.logout') }}">Log out</a>
+            {% else %}
+                <a href="{{ url_for('auth.login') }}">Log in</a>
+            {% endif %}
+        </nav>        
+    </header>
+
+    <main>
+        {% block content %}
+        <p>Welcome to the Music Library.</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; Fundamentals of Programming-C23130055. </p>
+    </footer>
+</body>
+</html>

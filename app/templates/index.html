@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="main">
+    <img src="{{ url_for('static', filename='images/icon/music_library.jpg') }}" alt="Music Library Icon" style="width: 50px; height: 50px;">
+    <h2>Welcome to the Music Library</h2>
+    <p>Here you can find information about the pop music and pop singers you want.<br>No matter who you are I hope you like my site and enjoy using it!</p>
+</div>
+
+<div class="intro-page">
+    <div  class="intro-info">
+        <h2>Recommended song</h2>
+        <p>Lemon</p>
+        <img src="{{ url_for('static', filename='images/songs/Lemon.jpg') }}" class="intro-songs"/>
+    </div>
+
+    <div  class="intro-info">
+        <h2>Recommended singer</h2>
+        <p>Taylor Swift</p>
+        <img src="{{ url_for('static', filename='images/artists/泰勒·斯威夫特(Taylor Swift).jpg') }}" class="intro-artist"/>
+    </div>
+</div>
+{% endblock %}

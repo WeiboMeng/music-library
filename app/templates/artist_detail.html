@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page">
+    <h1>{{ artist.name }}</h1>
+    <img src="{{ url_for('static', filename='images/artists/' + artist.image) }}" alt="{{ artist.name }}" width="450">
+    <p><strong>Birth Background:</strong> {{ artist.birth_background }}</p>
+    <p><strong>Profession:</strong> {{ artist.profession }}</p>
+    <p><strong>Active Years:</strong> {{ artist.active_years }}</p>
+    <p><strong>Biography:</strong> {{ artist.biography }}</p>
+    <p><strong>Region:</strong> {{ artist.region }}</p>
+
+    {% if source == 'ranking' %}
+        <a href="{{ url_for('ranking.rank') }}" class="back-button">Back to Ranking</a>
+    {% else %}
+        <a href="{{ url_for('main.artists_by_region', region=artist.region) }}" class="back-button">Back to {{ artist.region }} Artists</a>
+    {% endif %}
+</div>
+{% endblock %}

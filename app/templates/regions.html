@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="page">Select a Region</h2>
+<ul class="container">
+    <li><a href="{{ url_for('main.artists_by_region', region='Mandarin') }}">Mandarin</a></li>
+    <li><a href="{{ url_for('main.artists_by_region', region='Western') }}">Western</a></li>
+    <li><a href="{{ url_for('main.artists_by_region', region='Japan') }}">Japan</a></li>
+    <li><a href="{{ url_for('main.artists_by_region', region='Korea') }}">Korea</a></li>
+</ul>
+
+<div class="image-scroll-container artist-images">
+    <div class="image-scroll image-scroll-artist">
+        <img src="{{ url_for('static', filename='images/artists/aespa.jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/Aimer.jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/AKB48.jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/BLACKPINK.jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/BTS(防弹少年团,Bangtan Boys).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/EXO.jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/IU(李知恩,Lee Ji-eun).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/King Gnu.jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/LiSA.jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/NCT(包括NCT 127, NCT DREAM等子团).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/ONE OK ROCK.jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/SEVENTEEN.jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/Stray Kids.jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/TWICE.jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/YOASOBI.jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/乃木坂46(Nogizaka46).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/五月天(Mayday).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/亚莉安娜·格兰德(Ariana Grande).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/华晨宇(Hua Chenyu).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/周杰伦(Jay Chou).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/哈利·斯泰尔斯(Harry Styles).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/宇多田光(Hikaru Utada).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/嵐(ARASHI).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/张学友(Jacky Cheung).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/新Jeans(NewJeans).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/李荣浩(Li Ronghao).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/杨丞琳(Rainie Yang).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/杰森·玛耶兹(Jason Mraz).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/林俊杰(JJ Lin).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/比莉·艾利什(Billie Eilish).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/泰勒·斯威夫特(Taylor Swift).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/王菲(Faye Wong).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/碧昂丝(Beyoncé).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/米津玄師(Kenshi Yonezu).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/艾德·希兰(Ed Sheeran).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/蔡依林(Jolin Tsai).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/蕾哈娜(Rihanna).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/贾斯汀·比伯(Justin Bieber).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/邓紫棋(G.E.M.).jpg') }}"/>
+        <img src="{{ url_for('static', filename='images/artists/酷玩乐队(Coldplay).jpg') }}"/>
+    </div>
+</div>
+{% endblock %}

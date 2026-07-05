@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page">
+    <h1>{{ song.title }}</h1>
+    <img src="{{ url_for('static', filename='images/songs/' + song.image) }}" alt="{{ song.name }}" width="170">
+    <p><strong>Artist:</strong> {{ song.artist }}</p>
+    <p><strong>Album:</strong> {{ song.album }}</p>
+    <p><strong>Genre:</strong> {{ song.genre }}</p>
+    <p><strong>Released Date:</strong> {{ song.released_date }}</p>
+
+    {% if source == 'ranking' %}
+        <a href="{{ url_for('ranking.rank') }}" class="back-button">Back to Ranking</a>
+    {% else %}
+        <a href="{{ url_for('songs.select_songs', range=session.get('range', 'A-G')) }}" class="back-button">Back to {{ session.get('range', 'A-G') }} List</a>
+    {% endif %}
+</div>
+{% endblock %}

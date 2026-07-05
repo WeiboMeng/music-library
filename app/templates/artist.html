@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="back-button-container">
+    <a href="{{ url_for('main.regions') }}" class="back-button">Back to Regions</a>
+</div>
+
+<h1 class="page">Artists in {{ region }}</h1>
+<ul class="container">
+    {% for artist in artists %}
+        <li>
+            <a href="{{ url_for('main.artist_detail', artist_id=artist.id) }}">{{ artist.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
