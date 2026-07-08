@@ -1,18 +1,44 @@
 {% extends 'base.html' %}
 
+{% block title %}{{ song.title }}{% endblock %}
+
 {% block content %}
-<div class="page">
-    <h1>{{ song.title }}</h1>
-    <img src="{{ url_for('static', filename='images/songs/' + song.image) }}" alt="{{ song.name }}" width="170">
-    <p><strong>Artist:</strong> {{ song.artist }}</p>
-    <p><strong>Album:</strong> {{ song.album }}</p>
-    <p><strong>Genre:</strong> {{ song.genre }}</p>
-    <p><strong>Released Date:</strong> {{ song.released_date }}</p>
+
+<div class="back-button-container">
 
     {% if source == 'ranking' %}
-        <a href="{{ url_for('ranking.rank') }}" class="back-button">Back to Ranking</a>
+        <a href="{{ url_for('ranking.rank') }}" class="back-button">
+            ← Back to Ranking
+        </a>
     {% else %}
-        <a href="{{ url_for('songs.select_songs', range=session.get('range', 'A-G')) }}" class="back-button">Back to {{ session.get('range', 'A-G') }} List</a>
+        <a href="{{ url_for('songs.select_songs', range=session.get('range', 'A-G')) }}" class="back-button">
+            ← Back to {{ session.get('range', 'A-G') }}
+        </a>
     {% endif %}
+
 </div>
+
+<section class="page">
+
+    <h1>{{ song.title }}</h1>
+
+    <br>
+
+    <img
+        src="{{ url_for('static', filename='images/songs/' + song.image) }}"
+        alt="{{ song.title }}"
+        class="detail-image">
+
+    <br><br>
+
+    <p><strong>Artist:</strong> {{ song.artist }}</p>
+
+    <p><strong>Album:</strong> {{ song.album }}</p>
+
+    <p><strong>Genre:</strong> {{ song.genre }}</p>
+
+    <p><strong>Release Date:</strong> {{ song.released_date }}</p>
+
+</section>
+
 {% endblock %}
