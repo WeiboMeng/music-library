@@ -1,57 +1,76 @@
 {% extends 'base.html' %}
 
+{% block title %}Songs{% endblock %}
+
 {% block content %}
-<div>
-    <h2 class="page">Select Songs by Range</h2>
-    <ul class="container">
+
+<section class="page">
+
+    <h2>Browse Songs</h2>
+
+    <p>
+        Select a letter range to browse the available songs.
+    </p>
+
+    <div class="song-filter">
+
         {% for range in ranges %}
-        <li><a href="{{ url_for('songs.select_songs', range=range) }}">{{ range }}</a></li>
+            <a href="{{ url_for('songs.select_songs', range=range) }}">
+                {{ range }}
+            </a>
         {% endfor %}
-    </ul>
-</div>
+
+    </div>
+
+</section>
 
 <div class="image-scroll-container songs-images">
+
     <div class="image-scroll image-scroll-songs">
-        <img src="{{ url_for('static', filename='images/songs/Attention.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Bad Guy.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/DDU-DU DDU-DU.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Dynamite.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/First Love.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/God\'s Menu.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Good Day.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Growl.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/I\'m Yours.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Kick It.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Lemon.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Love so sweet.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Next Level.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Shake It Off.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Shape of You.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Single Ladies (Put a Ring on It).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Sorry.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Thank U, Next.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/The Beginning.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/TT.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Umbrella.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/VERY NICE.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Viva La Vida.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/Watermelon Sugar.jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/サヨナラの意味 (Sayonara no Imi).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/ヘビーローテーション (Heavy Rotation).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/倔强 (Jue Jiang).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/吻别 (Wen Bie).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/夜に駆ける (Yoru ni Kakeru).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/暧昧 (Ai Mei).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/李白 (Li Bai).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/江南 (Jiang Nan).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/泡沫 (Pao Mo).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/白日 (Hakujitsu).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/紅蓮華 (Gurenge).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/红豆 (Hong Dou).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/舞娘 (Wu Niang).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/蝶々結び (Chouchou Musubi).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/青花瓷 (Qing Hua Ci).jpg') }}"/>
-        <img src="{{ url_for('static', filename='images/songs/齐天 (Qi Tian).jpg') }}"/>
+
+        <img src="{{ url_for('static', filename='images/songs/Attention.jpg') }}" alt="Attention">
+        <img src="{{ url_for('static', filename='images/songs/Bad Guy.jpg') }}" alt="Bad Guy">
+        <img src="{{ url_for('static', filename='images/songs/DDU-DU DDU-DU.jpg') }}" alt="DDU-DU DDU-DU">
+        <img src="{{ url_for('static', filename='images/songs/Dynamite.jpg') }}" alt="Dynamite">
+        <img src="{{ url_for('static', filename='images/songs/First Love.jpg') }}" alt="First Love">
+        <img src="{{ url_for('static', filename='images/songs/God\'s Menu.jpg') }}" alt="God's Menu">
+        <img src="{{ url_for('static', filename='images/songs/Good Day.jpg') }}" alt="Good Day">
+        <img src="{{ url_for('static', filename='images/songs/Growl.jpg') }}" alt="Growl">
+        <img src="{{ url_for('static', filename='images/songs/I\'m Yours.jpg') }}" alt="I'm Yours">
+        <img src="{{ url_for('static', filename='images/songs/Kick It.jpg') }}" alt="Kick It">
+        <img src="{{ url_for('static', filename='images/songs/Lemon.jpg') }}" alt="Lemon">
+        <img src="{{ url_for('static', filename='images/songs/Love so sweet.jpg') }}" alt="Love so sweet">
+        <img src="{{ url_for('static', filename='images/songs/Next Level.jpg') }}" alt="Next Level">
+        <img src="{{ url_for('static', filename='images/songs/Shake It Off.jpg') }}" alt="Shake It Off">
+        <img src="{{ url_for('static', filename='images/songs/Shape of You.jpg') }}" alt="Shape of You">
+        <img src="{{ url_for('static', filename='images/songs/Single Ladies (Put a Ring on It).jpg') }}" alt="Single Ladies">
+        <img src="{{ url_for('static', filename='images/songs/Sorry.jpg') }}" alt="Sorry">
+        <img src="{{ url_for('static', filename='images/songs/Thank U, Next.jpg') }}" alt="Thank U, Next">
+        <img src="{{ url_for('static', filename='images/songs/The Beginning.jpg') }}" alt="The Beginning">
+        <img src="{{ url_for('static', filename='images/songs/TT.jpg') }}" alt="TT">
+        <img src="{{ url_for('static', filename='images/songs/Umbrella.jpg') }}" alt="Umbrella">
+        <img src="{{ url_for('static', filename='images/songs/VERY NICE.jpg') }}" alt="VERY NICE">
+        <img src="{{ url_for('static', filename='images/songs/Viva La Vida.jpg') }}" alt="Viva La Vida">
+        <img src="{{ url_for('static', filename='images/songs/Watermelon Sugar.jpg') }}" alt="Watermelon Sugar">
+        <img src="{{ url_for('static', filename='images/songs/サヨナラの意味 (Sayonara no Imi).jpg') }}" alt="Sayonara no Imi">
+        <img src="{{ url_for('static', filename='images/songs/ヘビーローテーション (Heavy Rotation).jpg') }}" alt="Heavy Rotation">
+        <img src="{{ url_for('static', filename='images/songs/倔强 (Jue Jiang).jpg') }}" alt="Jue Jiang">
+        <img src="{{ url_for('static', filename='images/songs/吻别 (Wen Bie).jpg') }}" alt="Wen Bie">
+        <img src="{{ url_for('static', filename='images/songs/夜に駆ける (Yoru ni Kakeru).jpg') }}" alt="Yoru ni Kakeru">
+        <img src="{{ url_for('static', filename='images/songs/暧昧 (Ai Mei).jpg') }}" alt="Ai Mei">
+        <img src="{{ url_for('static', filename='images/songs/李白 (Li Bai).jpg') }}" alt="Li Bai">
+        <img src="{{ url_for('static', filename='images/songs/江南 (Jiang Nan).jpg') }}" alt="Jiang Nan">
+        <img src="{{ url_for('static', filename='images/songs/泡沫 (Pao Mo).jpg') }}" alt="Pao Mo">
+        <img src="{{ url_for('static', filename='images/songs/白日 (Hakujitsu).jpg') }}" alt="Hakujitsu">
+        <img src="{{ url_for('static', filename='images/songs/紅蓮華 (Gurenge).jpg') }}" alt="Gurenge">
+        <img src="{{ url_for('static', filename='images/songs/红豆 (Hong Dou).jpg') }}" alt="Hong Dou">
+        <img src="{{ url_for('static', filename='images/songs/舞娘 (Wu Niang).jpg') }}" alt="Wu Niang">
+        <img src="{{ url_for('static', filename='images/songs/蝶々結び (Chouchou Musubi).jpg') }}" alt="Chouchou Musubi">
+        <img src="{{ url_for('static', filename='images/songs/青花瓷 (Qing Hua Ci).jpg') }}" alt="Qing Hua Ci">
+        <img src="{{ url_for('static', filename='images/songs/齐天 (Qi Tian).jpg') }}" alt="Qi Tian">
+
     </div>
+
 </div>
+
 {% endblock %}
