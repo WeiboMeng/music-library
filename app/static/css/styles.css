@@ -307,3 +307,84 @@ input[type="text"], input[type="password"] {
 .flash.info {
     color: blue;
 }
+
+/* ===========================
+   Home Page
+=========================== */
+
+.homepage-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.main h1 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    color: #442f29;
+}
+
+.homepage-introduction {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.05rem;
+    color: #555;
+}
+
+/* ===========================
+   Login & Register
+=========================== */
+
+.page h2{
+    margin-bottom:10px;
+    color:#442f29;
+}
+
+.page p{
+    margin-bottom:20px;
+    color:#666;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input[type="text"],
+input[type="password"]{
+
+    width:65%;
+    max-width:380px;
+
+    padding:10px 12px;
+
+    border:1px solid #ccc;
+    border-radius:6px;
+
+    transition:.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+
+    outline:none;
+
+    border-color:#442f29;
+
+    box-shadow:0 0 5px rgba(68,47,41,.2);
+}
+
+.btn{
+
+    transition:.2s;
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+}
