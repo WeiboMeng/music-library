@@ -1,3 +1,89 @@
+/* ===========================
+   Global Styles
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+header {
+    background: #20232a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.nav-right a:hover {
+    color: #61dafb;
+}
+
+.welcome-text {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* ===========================
+   Main Layout
+=========================== */
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #20232a;
+    color: white;
+    text-align: center;
+}
+
 html, body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -61,7 +147,7 @@ ul li {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.container {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(4, auto);
     justify-items: center;
