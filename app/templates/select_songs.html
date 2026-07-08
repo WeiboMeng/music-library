@@ -1,18 +1,39 @@
 {% extends 'base.html' %}
 
+{% block title %}Songs{% endblock %}
+
 {% block content %}
+
 <div class="back-button-container">
-    <a href="{{ url_for('songs.song') }}" class="back-button">Back to Songs</a>
+    <a href="{{ url_for('songs.song') }}" class="back-button">
+        ← Back to Songs
+    </a>
 </div>
 
-<div>
-    <h2 class="page">Songs in Range: {{ range }}</h2>
-    <ul class="container">
+<section class="page">
+
+    <h2>Songs ({{ range }})</h2>
+
+    <p>
+        Select a song to view more information.
+    </p>
+
+    <div class="song-grid">
+
         {% for song in songs %}
-        <li>
-            <a href="{{ url_for('songs.song_detail', song_id=song.id) }}">{{ song.title }}</a>
-        </li>        
+
+        <div class="song-card">
+
+            <a href="{{ url_for('songs.song_detail', song_id=song.id) }}">
+                {{ song.title }}
+            </a>
+
+        </div>
+
         {% endfor %}
-    </ul>
-</div>
+
+    </div>
+
+</section>
+
 {% endblock %}
