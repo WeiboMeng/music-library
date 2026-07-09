@@ -1,16 +1,43 @@
 {% extends 'base.html' %}
 
+{% block title %}Artists{% endblock %}
+
 {% block content %}
+
 <div class="back-button-container">
-    <a href="{{ url_for('main.regions') }}" class="back-button">Back to Regions</a>
+
+    <a href="{{ url_for('main.regions') }}" class="back-button">
+
+        ← Back to Regions
+
+    </a>
+
 </div>
 
-<h1 class="page">Artists in {{ region }}</h1>
-<ul class="container">
-    {% for artist in artists %}
-        <li>
-            <a href="{{ url_for('main.artist_detail', artist_id=artist.id) }}">{{ artist.name }}</a>
-        </li>
-    {% endfor %}
-</ul>
+<section class="page">
+
+    <h2>{{ region }} Artists</h2>
+
+    <p>Select an artist to view detailed information.</p>
+
+    <div class="song-grid">
+
+        {% for artist in artists %}
+
+        <div class="song-card">
+
+            <a href="{{ url_for('main.artist_detail', artist_id=artist.id) }}">
+
+                {{ artist.name }}
+
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
 {% endblock %}
