@@ -1,13 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2 class="page">Select a Region</h2>
-<ul class="container">
-    <li><a href="{{ url_for('main.artists_by_region', region='Mandarin') }}">Mandarin</a></li>
-    <li><a href="{{ url_for('main.artists_by_region', region='Western') }}">Western</a></li>
-    <li><a href="{{ url_for('main.artists_by_region', region='Japan') }}">Japan</a></li>
-    <li><a href="{{ url_for('main.artists_by_region', region='Korea') }}">Korea</a></li>
-</ul>
+<section class="page">
+
+    <h2>Discover Artists</h2>
+
+    <p>Select a region to browse artists.</p>
+
+    <div class="song-filter">
+
+        <a href="{{ url_for('main.artists_by_region', region='Mandarin') }}">Mandarin</a>
+
+        <a href="{{ url_for('main.artists_by_region', region='Western') }}">Western</a>
+
+        <a href="{{ url_for('main.artists_by_region', region='Japan') }}">Japan</a>
+
+        <a href="{{ url_for('main.artists_by_region', region='Korea') }}">Korea</a>
+
+    </div>
+
+</section>
 
 <div class="image-scroll-container artist-images">
     <div class="image-scroll image-scroll-artist">
