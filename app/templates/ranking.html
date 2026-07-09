@@ -1,29 +1,72 @@
 {% extends 'base.html' %}
 
+{% block title %}Ranking{% endblock %}
+
 {% block content %}
-<div class="page">
-    <h2>Ranking</h2>
-    <p>This ranking list is based on the popularity of the singers and songs<br>included on this website on the Internet and in real life.</p>
-    <h3>Top 5 Songs</h3>
-    <ul>
-        {% for song in top_songs %}
-            <li>
-                <a href="{{ url_for('songs.song_detail', song_id=song.id, source='ranking') }}">
-                    {{ song.title }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-    
-    <h3>Top 5 Artists</h3>
-    <ul>
-        {% for artist in top_artists %}
-            <li>
-                <a href="{{ url_for('main.artist_detail', artist_id=artist.id, source='ranking') }}">
-                    {{ artist.name }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-</div>
+
+<section class="page">
+
+    <h2>Global Music Rankings</h2>
+
+    <p>
+        Explore the most popular songs and artists featured in the Music Library.
+        The rankings are based on their popularity and influence.
+    </p>
+
+    <br>
+
+    <div class="ranking-grid">
+
+        <div class="ranking-card">
+
+            <h3>Top 5 Songs</h3>
+
+            <ul>
+
+                {% for song in top_songs %}
+
+                <li>
+
+                    <a href="{{ url_for('songs.song_detail', song_id=song.id, source='ranking') }}">
+
+                        {{ loop.index }}. {{ song.title }}
+
+                    </a>
+
+                </li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+        <div class="ranking-card">
+
+            <h3>Top 5 Artists</h3>
+
+            <ul>
+
+                {% for artist in top_artists %}
+
+                <li>
+
+                    <a href="{{ url_for('main.artist_detail', artist_id=artist.id, source='ranking') }}">
+
+                        {{ loop.index }}. {{ artist.name }}
+
+                    </a>
+
+                </li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
 {% endblock %}
