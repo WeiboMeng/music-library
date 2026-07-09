@@ -116,7 +116,7 @@ def register():
         password = request.form.get('password')
         confirm_password = request.form.get('confirm_password')
 
-        logging.info(f"Received POST data: username={username}, password={password}, confirm_password={confirm_password}")
+        logging.info("New registration request received.")
 
         if password != confirm_password:
             flash('Passwords do not match.', 'error')
