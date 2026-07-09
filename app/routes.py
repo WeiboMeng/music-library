@@ -100,7 +100,7 @@ def login():
 @auth.route('/guest_login', methods=['POST'])
 def guest_login():
     session['user'] = 'Guest'
-    flash('Login as guest succeeded！', 'success')
+    flash('Login as guest succeeded!', 'success')
     return redirect(url_for('main.index'))
 
 @auth.route('/logout')
