@@ -2,7 +2,11 @@
 
 A Flask-based music library web application that allows users to register, browse songs and artists, and explore music rankings.
 
-## Live Demo
+## Deployment
+
+The application is deployed using Render.
+
+Live Demo:
 
 https://music-library-pkeb.onrender.com
 
@@ -97,16 +101,6 @@ Run the application.
 ```bash
 python run.py
 ```
-
----
-
-## Deployment
-
-The application is deployed using Render.
-
-Live Demo:
-
-https://music-library-pkeb.onrender.com
 
 ---
 
