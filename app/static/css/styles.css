@@ -20,13 +20,13 @@ body {
 =========================== */
 
 header {
+    width: 100%;
     background: #20232a;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .navbar {
-    max-width: 1200px;
-    margin: auto;
+    width: 100%;
     padding: 16px 24px;
 
     display: flex;
@@ -96,10 +96,7 @@ html, body {
 }
 
 nav {
-    background-color: #442f29;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+    width:100%;
 }
 
 nav a {
@@ -192,20 +189,20 @@ footer {
 }
 
 .image-scroll-container {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    margin-top: 20px;
-    bottom: 67px;
+    width:100%;
+    overflow:hidden;
+    margin-top:30px;
 }
 
 .image-scroll-songs {
     display: flex;
+    width:max-content;
     animation: scroll 120s linear infinite;
 }
 
 .image-scroll-artist {
     display: flex;
+    width:max-content;
     animation: scroll 120s linear infinite;
 }
 
@@ -222,12 +219,14 @@ footer {
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateX(-50%);
-    }
-    100% {
-        transform: translateX(-450%);
-    }
+
+from {
+    transform:translateX(0);
+}
+to {
+    transform:translateX(-50%);
+}
+
 }
 
 .intro-page {
