@@ -2,13 +2,19 @@
 
 A Flask-based music library web application that allows users to register, browse songs and artists, and explore music rankings.
 
+## Live Demo
+
+https://music-library-pkeb.onrender.com
+
 ---
 
 ## Project Overview
 
-Music Library is a web application built with Flask following the MVC pattern. The project focuses on user authentication, music browsing, artist information, and ranking pages while demonstrating fundamental full-stack web development skills.
+Music Library is a Flask-based web application designed for exploring songs, artists, and music rankings.
 
-This project was originally developed as a university coursework project and is now being improved as a personal portfolio project.
+The project focuses on user authentication, database integration, page routing, and frontend presentation while demonstrating fundamental full-stack web development skills.
+
+This project was originally developed as a university coursework project and has been enhanced as a personal portfolio project.
 
 ---
 
@@ -40,11 +46,15 @@ This project was originally developed as a university coursework project and is 
 * Python
 * Flask
 * SQLAlchemy
-* Flask-Login
 
 ### Database
 
 * SQLite
+
+### Deployment
+
+* Render
+* GitHub
 
 ---
 
@@ -90,6 +100,16 @@ python run.py
 
 ---
 
+## Deployment
+
+The application is deployed using Render.
+
+Live Demo:
+
+https://music-library-pkeb.onrender.com
+
+---
+
 ## Usage
 
 After starting the application, open your browser and visit the local address displayed in the terminal.
@@ -108,7 +128,7 @@ You can:
 ## Project Structure
 
 ```text
-music-library/
+music-library
 │
 ├── app/
 │   ├── static/
@@ -138,13 +158,31 @@ music-library/
 
 ## Screenshots
 
-Screenshots will be added after the UI redesign.
+### Home Page
+
+![Home Page](screenshots/Home%20page.png)
+
+### Login Page
+
+![Login Page](screenshots/Login%20page.png)
+
+### Register Page
+
+![Register Page](screenshots/Register%20page.png)
+
+### Songs Page
+
+![Songs Page](screenshots/Songs%20page.png)
+
+### Artist Page
+
+![Artist Page](screenshots/Artist%20page.png)
 
 ---
 
 ## License
 
-This project is for educational and portfolio purposes.
+This project is licensed under the MIT License.
 
 ---
 
